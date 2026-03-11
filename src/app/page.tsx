@@ -1,19 +1,21 @@
-import { Col, Container, Image, Row } from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Container } from 'react-bootstrap';
+import './style.css';
 
-/** The Home page. */
+import TopMenu from '@/components/TopMenu';
+import IslandSnowLogo from '@/components/IslandSnowLogo';
+import MiddleMenu from '@/components/MiddleMenu';
+import FullWidthImage from '@/components/FullWidthImage';
+import FooterMenu from '@/components/FooterMenu';
+
 const Home = () => (
   <main>
-    <Container id="landing-page" fluid className="py-3">
-      <Row className="align-middle text-center">
-        <Col xs={4}>
-          <Image src="next.svg" width="150px" alt="" />
-        </Col>
-
-        <Col xs={8} className="d-flex flex-column justify-content-center">
-          <h1>Welcome to this template</h1>
-          <p>Now get to work and modify this app!</p>
-        </Col>
-      </Row>
+    <Container fluid>
+      <TopMenu />
+      <IslandSnowLogo />
+      <MiddleMenu />
+      <FullWidthImage />
+      <FooterMenu />
     </Container>
   </main>
 );
